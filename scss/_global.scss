@@ -1,0 +1,262 @@
+// global for all
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: 16px;
+  background-color: #171919;
+  color: #fff;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// global for all
+
+.container {
+  max-width: 2480px;
+  margin: 0 auto;
+}
+
+.headline-left {
+  font-size: 22px;
+  line-height: 32%;
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  position: relative;
+  padding-left: 103px;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    top: 50%;
+  }
+}
+
+.headline-right {
+  font-size: 22px;
+  line-height: 32%;
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  position: relative;
+  padding-right: 103px;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    right: 0;
+    top: 50%;
+  }
+}
+
+.header__location {
+  line-height: 14px;
+  letter-spacing: 1.05px;
+  position: relative;
+  padding-left: 19px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    background-image: url(../img/poi.svg);
+    left: 0;
+    top: 0;
+  }
+}
+
+.title {
+  span {
+    font-size: 200px;
+    color: rgba(#fff, 0.02);
+    font-weight: 800;
+    position: relative;
+    transform: translateX(-50px);
+    display: inline-block;
+  }
+  h3 {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    margin: 0;
+    color: #fff;
+    font-size: 80px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 1px;
+      background-color: #ffa41b;
+    }
+  }
+}
+
+.subtitle {
+  display: inline-block;
+  text-align: right;
+  &__head {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 215%;
+    padding-right: 10px;
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
+.descr {
+  display: inline-block;
+  padding: 0px 0px 0px 5px;
+  &-head {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 215%;
+
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
+.btn {
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 800;
+  color: #fff;
+  height: 80px;
+  position: relative;
+
+  span {
+    background-color: #ffa41b;
+    padding: 17px 57px 15px 17px;
+    margin-left: 19px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: #fff;
+      top: 50%;
+      left: -10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 21px;
+      background-image: url(../img/arrow_right.svg);
+      z-index: 4;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+    }
+  }
+}
+.footer{
+  .btn{
+    span{
+      padding: 17px 17px 15px;
+&::after{
+      display: none;
+    }
+    }
+  }
+}
+.surf,
+.travel,
+.sleep {
+  padding: 160px 0px 210px 0px;
+}
+
+.quantity {
+  display: inline-block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  display: block;
+  background-color: transparent;
+    font-size: 40px;
+  line-height: 36px;
+  font-weight: 800;
+  color: #fff;
+
+
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  user-select: none;
+  top: 50px;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  right: 25px;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  right: 50px;
+}
